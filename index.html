@@ -1,0 +1,63 @@
+<html lang=”ja”>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-langage" content="ja">
+
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="reset.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Shippori+Antique+B1&family=Zen+Kaku+Gothic+New&family=Zen+Kurenaido&display=swap"
+            rel="stylesheet">
+
+        <title>Portfolio - Inada</title>
+
+    </head>
+
+    <body>
+        <header>
+            <div class="headerlogo">
+                <a href="index.html" target="_blank"><img src="img/logo.png"></a>
+            </div>
+            <nav>
+                <ul class="list_nav_header">
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCUPToO83D8411m3FlDf3drw" target="blank">YouTube</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/kuwaal.co.jp/" target="blank">Instagram</a>
+                    </li>
+                </ul>
+                <div class="burger"></div>
+                <div class="menu">
+                    <div class="me"><a href="about_me.html">About me.</a></div>
+                    <div class="space">　</div>
+                    <div class="int"><a href="int.html">Interaction.</a></div>
+                    <div class="space">　</div>
+                    <div class="mov"><a href="mov.html">Movie & Animation.</a></div>
+                    <div class="space">　</div>
+                    <div class="gra"><a href="gra.html">Hobby & Others.</a></div>
+                </div>
+            </nav>
+        </header>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(".burger").on("click", function () {
+                $(".burger").toggleClass("is-active");
+                $(".menu").toggleClass("is-active");
+            });
+        </script>
+
+        <div id="title">
+            <div class="fadeInTitle">
+                PORTFOLIO
+            </div>
+        </div>
+
+    </body>
+</heml>

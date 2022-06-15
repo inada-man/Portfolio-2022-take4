@@ -1,0 +1,338 @@
+body {
+    font-family: 'Shippori Antique B1', sans-serif;
+    margin: 0px;
+}
+
+/* ヘッダー */
+header{
+    align-items: center;
+    display: flex;
+    padding: 0 8px;
+}
+
+.list_nav_header{
+    align-items: center;
+}
+
+/* youtube&instagram */
+.list_nav_header li a {
+    align-items: center;
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.5s;
+    text-shadow: 0 0 15px #666;
+    text-decoration: none;
+}
+
+.list_nav_header li a:hover {
+    color: white;
+    text-shadow: 0 0 15px #666;
+}
+
+/* Logo */
+.headerlogo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    margin-left:auto;
+    margin-right:95px;
+    margin-top: 1%;
+    overflow: hidden;
+}
+
+.list_nav_header {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.burger {
+    width: 40px;
+    height: 40px;
+    background-image: url(img/menu_icon.png);
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s;
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 0 0 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+    right:2%;
+    top:2%;
+}
+
+.burger:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hurger.is-active{
+    background-image: url(img/close_icon.png);
+    overflow: hidden
+}
+
+.menu {
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #666;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.menu.is-active {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu a{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgba(190, 190, 190, 1);
+    transition: color 0.5s;
+    margin: 0 0 0 0px;
+    font-size: 40px;
+}
+
+.menu a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.space{
+    font-size: 32px;
+}
+
+.top_menu{
+    text-shadow: 0 0 15px #2E2E2E;
+    animation-name: fadeInAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+
+.me{
+    text-shadow: 0 0 15px #2E2E2E;
+    animation-name: fadeInAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.mov{
+    text-shadow: 0 0 15px #2E2E2E;
+    animation-name: fadeInAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.gra{
+    text-shadow: 0 0 15px #2E2E2E;
+    animation-name: fadeInAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#background_movie{
+    position: initial;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+} 
+
+#video-area{
+    background-color: #F2F2F2;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.title{
+    position: initial;
+    position:absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    text-shadow: 0 0 15px #666;
+    font-size: 70px;
+    display: block;
+    animation-name: fadeInAnime;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+
+/* 本文 */
+#container{
+    background:#F2F2F2;
+    padding:300px 250px;
+    text-align: center;
+}
+
+.page_link_title{
+    color: #0A0A0A;
+    font-size: 70;
+    margin: 300 0 40 0;
+}
+
+#page_link a{
+    color: #7E7E7E;
+    font-size: 40;
+    transition: color 0.5s;
+    text-decoration: none;
+    margin: 0 0 100 0;
+}
+
+#page_link a:hover{
+    color: #282828;
+}
+
+.movie_wrap{
+    position:relative;
+    padding-bottom: 56.25%;
+    height:0;
+    overflow:hidden;
+}
+
+.movie_wrap iframe{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.movie_wrap a{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.genre_title_type1{
+    font-size:  70px;
+    margin: 500 0 150 0px;
+    color: #0A0A0A;
+    
+}
+
+.processing_works{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.genre_title_type2{
+    font-size:  70px;
+    margin: 500 0 150 0px;
+    color: #0A0A0A;
+}
+
+.works_title{
+    font-size: 50px;
+    margin: 40 0px;
+    color: #0A0A0A;
+
+}
+
+.works_explanation{
+    font-size: 18px;
+    margin: 40 0 500 0px;
+    color: #151515;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    font-feature-settings: "palt";
+}
+
+.works_explanation a{
+    color: #1467FF;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+.works_explanation a:hover{
+    color: #00C757;
+}
+
+.page_top_return{
+    background-color: #F2F2F2;
+    text-align: center;
+    z-index: 1;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+.page_top_return a{
+    color: #7E7E7E;
+    font-size: 32px;
+    transition: color 0.5s;
+    text-decoration: none;
+    margin: 0 0 100 0;
+}
+
+.page_top_return a:hover{
+    color: #282828;
+}
+
+#footer{
+    color: #F2F2F2;
+    background: #0A0A0A;
+    font-size: 25px;
+    text-align: center;
+    z-index: 1;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
